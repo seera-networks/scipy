@@ -260,9 +260,9 @@ extern void    dcheck_tempv(int, double *);
 
 /*! \brief BLAS */
 
-extern int dgemm_(const char*, const char*, const int*, const int*, const int*,
-                  const double*, const double*, const int*, const double*,
-		  const int*, const double*, double*, const int*);
+extern int dgemm_( char*,  char*,  int*,  int*,  int*,
+                   double*,  double*,  int*,  double*,
+		   int*,  double*, double*,  int*);
 extern int dtrsv_(char*, char*, char*, int*, double*, int*,
                   double*, int*);
 extern int dtrsm_(char*, char*, char*, char*, int*, int*,

@@ -156,17 +156,17 @@ static PyObject *odepack_error;
     #endif
 #endif
 
-typedef void lsoda_f_t(F_INT *n, double *t, double *y, double *ydot);
+typedef int lsoda_f_t(F_INT *n, double *t, double *y, double *ydot);
 typedef int lsoda_jac_t(F_INT *n, double *t, double *y, F_INT *ml, F_INT *mu,
                         double *pd, F_INT *nrowpd);
 
-void LSODA(lsoda_f_t *f, F_INT *neq, double *y, double *t, double *tout, F_INT *itol,
+int LSODA(lsoda_f_t *f, F_INT *neq, double *y, double *t, double *tout, F_INT *itol,
            double *rtol, double *atol, F_INT *itask, F_INT *istate, F_INT *iopt,
            double *rwork, F_INT *lrw, F_INT *iwork, F_INT *liw, lsoda_jac_t *jac,
            F_INT *jt);
 
 /*
-void ode_function(int *n, double *t, double *y, double *ydot)
+int ode_function(int *n, double *t, double *y, double *ydot)
 {
   ydot[0] = -0.04*y[0] + 1e4*y[1]*y[2];
   ydot[2] = 3e7*y[1]*y[1];
@@ -175,7 +175,7 @@ void ode_function(int *n, double *t, double *y, double *ydot)
 }
 */
 
-void
+int
 ode_function(F_INT *n, double *t, double *y, double *ydot)
 {
     /*

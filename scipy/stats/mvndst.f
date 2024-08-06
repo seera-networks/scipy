@@ -21,8 +21,8 @@
 *          Pullman, WA 99164-3113
 *          Email : alangenz@wsu.edu
 *
-      SUBROUTINE mvnun(d, n, lower, upper, means, covar, maxpts, 
-     &                   abseps, releps, value, inform)
+      RECURSIVE SUBROUTINE mvnun(d, n, lower, upper, means, covar, 
+     &                   maxpts, abseps, releps, value, inform)
 *  Parameters
 *
 *   d       integer, dimensionality of the data
@@ -88,8 +88,8 @@
       END 
 
 
-      SUBROUTINE mvnun_weighted(d, n, lower, upper, means, weights,
-     &                          covar, maxpts, abseps, releps, 
+      recursive SUBROUTINE mvnun_weighted(d, n, lower, upper, means, 
+     &                          weights, covar, maxpts, abseps, releps,
      &                           value, inform)
 *  Parameters
 *

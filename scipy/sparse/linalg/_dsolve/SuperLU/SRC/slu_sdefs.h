@@ -259,9 +259,9 @@ extern void    scheck_tempv(int, float *);
 
 /*! \brief BLAS */
 
-extern int sgemm_(const char*, const char*, const int*, const int*, const int*,
-                  const float*, const float*, const int*, const float*,
-		  const int*, const float*, float*, const int*);
+extern int sgemm_( char*,  char*,  int*,  int*,  int*,
+                   float*,  float*,  int*,  float*,
+		   int*,  float*, float*,  int*);
 extern int strsv_(char*, char*, char*, int*, float*, int*,
                   float*, int*);
 extern int strsm_(char*, char*, char*, char*, int*, int*,

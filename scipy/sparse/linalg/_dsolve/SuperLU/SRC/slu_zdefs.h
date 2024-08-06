@@ -262,9 +262,9 @@ extern void    zcheck_tempv(int, doublecomplex *);
 
 /*! \brief BLAS */
 
-extern int zgemm_(const char*, const char*, const int*, const int*, const int*,
-                  const doublecomplex*, const doublecomplex*, const int*, const doublecomplex*,
-		  const int*, const doublecomplex*, doublecomplex*, const int*);
+extern int zgemm_( char*,  char*,  int*,  int*,  int*,
+                   doublecomplex*,  doublecomplex*,  int*,  doublecomplex*,
+		   int*,  doublecomplex*, doublecomplex*,  int*);
 extern int ztrsv_(char*, char*, char*, int*, doublecomplex*, int*,
                   doublecomplex*, int*);
 extern int ztrsm_(char*, char*, char*, char*, int*, int*,

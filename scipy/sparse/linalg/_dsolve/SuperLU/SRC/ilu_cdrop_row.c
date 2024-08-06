@@ -23,10 +23,10 @@ at the top-level directory.
 #include <stdlib.h>
 #include "slu_cdefs.h"
 
-extern void cswap_(int *, singlecomplex [], int *, singlecomplex [], int *);
-extern void caxpy_(int *, singlecomplex *, singlecomplex [], int *, singlecomplex [], int *);
-extern void ccopy_(int *, singlecomplex [], int *, singlecomplex [], int *);
-extern void scopy_(int *, float [], int *, float [], int *);
+extern int cswap_(int *, singlecomplex [], int *, singlecomplex [], int *);
+extern int caxpy_(int *, singlecomplex *, singlecomplex [], int *, singlecomplex [], int *);
+extern int ccopy_(int *, singlecomplex [], int *, singlecomplex [], int *);
+extern int scopy_(int *, float [], int *, float [], int *);
 extern float scasum_(int *, singlecomplex *, int *);
 extern float scnrm2_(int *, singlecomplex *, int *);
 extern double dnrm2_(int *, double [], int *);

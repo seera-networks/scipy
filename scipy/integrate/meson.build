@@ -167,7 +167,7 @@ py3.extension_module('_dop',
   _dop_module,
   link_with: [dop_lib],
   c_args: [numpy_nodepr_api, Wno_unused_variable],
-  dependencies: [fortranobject_dep],
+  dependencies: [lapack, fortranobject_dep],
   link_args: version_link_args,
   install: true,
   link_language: 'fortran',
@@ -178,24 +178,6 @@ py3.extension_module('_test_multivariate',
   [quadpack_test_src],
   link_args: version_link_args,
   install: true,
-  subdir: 'scipy/integrate'
-)
-
-_test_odeint_banded_module = custom_target('_test_odeint_banded_module',
-  output: ['_test_odeint_bandedmodule.c', '_test_odeint_banded-f2pywrappers.f'],
-  input: 'tests/banded5x5.pyf',
-  command: [py3, generate_f2pymod, '@INPUT@', '-o', '@OUTDIR@']
-)
-
-py3.extension_module('_test_odeint_banded',
-  ['tests/banded5x5.f', _test_odeint_banded_module],
-  c_args: numpy_nodepr_api,
-  link_with: [lsoda_lib, mach_lib],
-  fortran_args: _fflag_Wno_unused_dummy_argument,
-  link_args: version_link_args,
-  dependencies: [lapack, fortranobject_dep],
-  install: true,
-  link_language: 'fortran',
   subdir: 'scipy/integrate'
 )
 

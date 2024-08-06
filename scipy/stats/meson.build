@@ -44,7 +44,7 @@ mvn = py3.extension_module('_mvn',
   # Wno-surprising is to suppress a pointless warning with GCC 10-12
   # (see GCC bug 98411: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=98411)
   fortran_args: [fortran_ignore_warnings, _fflag_Wno_surprising],
-  dependencies: [fortranobject_dep],
+  dependencies: [lapack, fortranobject_dep],
   link_args: version_link_args,
   install: true,
   link_language: 'fortran',

@@ -3,6 +3,9 @@
 
 #include <stdlib.h>
 
+#include "f2c.h"
+
+
 /*
  * Support routines
  */

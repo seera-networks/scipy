@@ -13,7 +13,7 @@
 #include "odrpack.h"
 
 
-void F_FUNC(dodrc,DODRC)(void (*fcn)(F_INT *n, F_INT *m, F_INT *np, F_INT *nq, F_INT *ldn, F_INT *ldm,
+void F_FUNC(dodrc,DODRC)(int (*fcn)(F_INT *n, F_INT *m, F_INT *np, F_INT *nq, F_INT *ldn, F_INT *ldm,
             F_INT *ldnp, double *beta, double *xplusd, F_INT *ifixb, F_INT *ifixx,
             F_INT *ldifx, F_INT *ideval, double *f, double *fjacb, double *fjacd,
             F_INT *istop),

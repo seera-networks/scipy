@@ -26,7 +26,7 @@ at the top-level directory.
 int num_drop_U;
 #endif
 
-extern void scopy_(int *, float [], int *, float [], int *);
+extern int scopy_(int *, float [], int *, float [], int *);
 
 #if 0
 static float *A;  /* used in _compare_ only */

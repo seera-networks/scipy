@@ -262,9 +262,9 @@ extern void    ccheck_tempv(int, singlecomplex *);
 
 /*! \brief BLAS */
 
-extern int cgemm_(const char*, const char*, const int*, const int*, const int*,
-                  const singlecomplex*, const singlecomplex*, const int*, const singlecomplex*,
-		  const int*, const singlecomplex*, singlecomplex*, const int*);
+extern int cgemm_( char*,  char*,  int*,  int*,  int*,
+                   singlecomplex*,  singlecomplex*,  int*,  singlecomplex*,
+		   int*,  singlecomplex*, singlecomplex*,  int*);
 extern int ctrsv_(char*, char*, char*, int*, singlecomplex*, int*,
                   singlecomplex*, int*);
 extern int ctrsm_(char*, char*, char*, char*, int*, int*,

@@ -1,6 +1,5 @@
-      recursive function evapol(tu,nu,tv,nv,c,rad,x,y) result(e_res)
+      recursive real*8 function evapol(tu,nu,tv,nv,c,rad,x,y)
       implicit none
-      real*8 :: e_res
 c  function program evacir evaluates the function f(x,y) = s(u,v),
 c  defined through the transformation
 c      x = u*rad(v)*cos(v)    y = u*rad(v)*sin(v)
@@ -78,7 +77,7 @@ c  calculate the (u,v)-coordinates of the given point.
       if(u.gt.one) u = one
 c  evaluate s(u,v)
   10  call bispev(tu,nu,tv,nv,c,3,3,u,1,v,1,f,wrk,8,iwrk,2,ier)
-      e_res = f
+      evapol = f
       return
       end
 

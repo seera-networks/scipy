@@ -1,7 +1,6 @@
-      recursive function dblint(tx,nx,ty,ny,c,kx,ky,xb,xe,yb,
-     *    ye,wrk) result(dblint_res)
+      recursive real*8 function dblint(tx,nx,ty,ny,c,kx,ky,xb,xe,yb,
+     *    ye,wrk)
       implicit none
-      real*8 :: dblint_res
 c  function dblint calculates the double integral
 c         / xe  / ye
 c        |     |      s(x,y) dx dy
@@ -75,7 +74,7 @@ c  we calculate the integrals of the normalized b-splines ni,kx+1(x)
 c  we calculate the integrals of the normalized b-splines nj,ky+1(y)
       call fpintb(ty,ny,wrk(nkx1+1),nky1,yb,ye)
 c  calculate the integral of s(x,y)
-      dblint_res = 0.
+      dblint = 0.
       do 200 i=1,nkx1
         res = wrk(i)
         if(res.eq.0.) go to 200
@@ -84,7 +83,7 @@ c  calculate the integral of s(x,y)
         do 100 j=1,nky1
           m = m+1
           l = l+1
-          dblint_res = dblint_res + res*wrk(l)*c(m)
+          dblint = dblint + res*wrk(l)*c(m)
  100    continue
  200  continue
       return
